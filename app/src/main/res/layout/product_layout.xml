@@ -1,0 +1,109 @@
+<!-- res/layout/product_details.xml -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <!-- Product Image (if applicable) -->
+    <ImageView
+        android:id="@+id/imageViewProduct"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@color/blue" />
+
+    <TextView
+        android:id="@+id/textViewProductOffer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/background_red"
+        android:padding="5dp"
+        android:text="-20%"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <!-- Product Rating -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/imageViewProduct"
+        android:layout_alignBottom="@+id/imageViewProduct"
+        android:layout_marginBottom="-15dp"
+        android:background="@drawable/background_oval"
+        app:cardCornerRadius="30dp"
+        android:elevation="@dimen/cardview_default_elevation">
+        <ImageView
+            android:id="@+id/imageViewLike"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:src="@drawable/favorite"
+            app:tint="@color/black1"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <RatingBar
+        android:id="@+id/rBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewProduct"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:clickable="false"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:isIndicator="true"
+        android:theme="@style/RatingBar"
+        style="?android:attr/ratingBarStyleSmall" />
+
+    <!-- Product Brand -->
+    <TextView
+        android:id="@+id/textViewProductBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rBar"
+        android:layout_marginTop="8dp"
+        android:text="Product Brand"
+        android:textColor="@color/black1" />
+
+    <!-- Product Name -->
+    <TextView
+        android:id="@+id/textViewProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewProductBrand"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black1"
+        android:text="Product Name"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+
+    <!-- Product Price -->
+    <TextView
+        android:id="@+id/textViewProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewProductName"
+        android:layout_marginTop="8dp"
+        android:text="19.99$"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black1"/>
+
+    <!-- Add more details as needed (e.g., quantity, rating, etc.) -->
+
+    <!-- Add buttons or other interactive elements as needed -->
+
+</RelativeLayout>
